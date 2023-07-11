@@ -1,0 +1,14 @@
+diff --git a/src/mse/MSComplex.hxx b/src/mse/MSComplex.hxx
+index 4de5be7..e02e5e6 100644
+--- a/src/mse/MSComplex.hxx
++++ b/src/mse/MSComplex.hxx
+@@ -47,9 +47,7 @@
+ #ifndef __MORSE_SMALE_COMPLEX_HEADER__
+ #define __MORSE_SMALE_COMPLEX_HEADER__
+ 
+-#include <sys/time.h>
+ #include <sys/param.h>
+-#include <sys/times.h>
+ 
+ #include "find_unordered_maps.hxx"
+ 
