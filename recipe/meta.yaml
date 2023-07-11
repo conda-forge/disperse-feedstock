@@ -10,12 +10,12 @@ source:
   sha256: 3406f08470df454bc5428d18ec4828b8b683719cc8eddde52a29b91639f51771
 
 build:
-  skip: true  # [win]
   number: 0
 
 requirements:
   build:
-    - {{ compiler('cxx') }}
+    - {{ compiler('cxx') }}  # [unix]
+    - {{ compiler('m2w64_cxx') }}  # [win]
     - cmake
     - make  # [unix]
     - llvm-openmp  # [osx]
@@ -25,6 +25,7 @@ requirements:
     - cgal
     - libopenblas
     - gmp  # [unix]
+    - mpir  # [win]
     - llvm-openmp  # [osx]
     - libgomp  # [linux]
 

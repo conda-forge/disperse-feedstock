@@ -1,0 +1,10 @@
+channel_sources:
+- conda-forge
+channel_targets:
+- conda-forge main
+gsl:
+- '2.7'
+m2w64_cxx_compiler:
+- m2w64-toolchain
+target_platform:
+- win-64
