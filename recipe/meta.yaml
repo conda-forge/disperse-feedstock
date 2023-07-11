@@ -17,15 +17,16 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - cmake
-    - make
-    - openmp  # [osx]
+    - make  # [unix]
+    - llvm-openmp  # [osx]
+    - libgomp  # [linux]
   host:
     - gsl
     - cgal
     - libopenblas
-    - gmp
-    - openmp  # [osx]
-    - _openmp_mutex  # [linux]
+    - gmp  # [unix]
+    - llvm-openmp  # [osx]
+    - libgomp  # [linux]
 
 test:
   commands:
