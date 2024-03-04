@@ -11,7 +11,7 @@ source:
 
 build:
   skip: true  # [win]
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -20,6 +20,7 @@ requirements:
     - make  # [unix]
     - llvm-openmp  # [osx]
     - libgomp  # [linux]
+    - cfitsio
   host:
     - gsl
     - cgal
@@ -27,6 +28,7 @@ requirements:
     - gmp  # [unix]
     - llvm-openmp  # [osx]
     - libgomp  # [linux]
+    - cfitsio
 
 test:
   commands:
