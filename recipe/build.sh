@@ -1,9 +1,6 @@
 set -euo pipefail
 set -x
 
-# Apply patch
-git apply 001-fix_cmakelist.patch
-
 mkdir -p build
 
 cd build
