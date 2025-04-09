@@ -1,0 +1,25 @@
+diff --git a/src/delaunay/CMakeLists.txt b/src/delaunay/CMakeLists.txt
+index d5d56c5..f9f6fad 100644
+--- a/src/delaunay/CMakeLists.txt
++++ b/src/delaunay/CMakeLists.txt
+@@ -5,7 +5,7 @@ include_directories(${MSE_DIR})
+ 
+ if(GSL_FOUND AND CGAL_FOUND)
+ 
+-  include( ${CGAL_USE_FILE} )
++  # include( ${CGAL_USE_FILE} )
+ 
+   if (${CMAKE_BUILD_TYPE} STREQUAL "Debug")
+     STRING(REGEX REPLACE "-O2" " "  CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}" )
+@@ -89,6 +89,11 @@ if(GSL_FOUND AND CGAL_FOUND)
+     #target_link_libraries(delaunay_3D ${SDL_LIBRARIES})
+   endif()
+ 
++  if (CGAL_FOUND)
++    target_link_libraries(delaunay_2D CGAL::CGAL)
++    target_link_libraries(delaunay_3D CGAL::CGAL)
++  endif()
++
+   SET( TARGETS_LIST ${TARGETS_LIST} delaunay_2D delaunay_3D PARENT_SCOPE)
+   install (TARGETS delaunay_2D delaunay_3D DESTINATION bin)
+ else()

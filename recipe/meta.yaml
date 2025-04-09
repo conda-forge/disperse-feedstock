@@ -8,10 +8,12 @@ package:
 source:
   url: https://github.com/thierry-sousbie/DisPerSE/archive/master.tar.gz
   sha256: 3406f08470df454bc5428d18ec4828b8b683719cc8eddde52a29b91639f51771
+  patches:
+    - 001-fix_cmake.diff
 
 build:
   skip: true  # [win]
-  number: 3
+  number: 4
 
 requirements:
   build:
