@@ -27,7 +27,7 @@ requirements:
   host:
     - gsl
     - cgal
-    - libopenblas
+    - blis
     - gmp  # [unix]
     - llvm-openmp  # [osx]
     - libgomp  # [linux]
