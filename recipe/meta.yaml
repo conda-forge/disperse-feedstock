@@ -27,11 +27,15 @@ requirements:
   host:
     - gsl
     - cgal
-    - blis
+    - libblas
+    - libcblas
     - gmp  # [unix]
     - llvm-openmp  # [osx]
     - libgomp  # [linux]
     - cfitsio
+  run:
+    - libblas
+    - libcblas
 
 test:
   commands:
