@@ -13,7 +13,7 @@ source:
 
 build:
   skip: true  # [win]
-  number: 6
+  number: 7
 
 requirements:
   build:
@@ -27,7 +27,7 @@ requirements:
   host:
     - gsl
     - cgal
-    - libopenblas
+    - blis
     - gmp  # [unix]
     - llvm-openmp  # [osx]
     - libgomp  # [linux]
