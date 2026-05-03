@@ -13,7 +13,7 @@ source:
 
 build:
   skip: true  # [win]
-  number: 6
+  number: 7
 
 requirements:
   build:
@@ -27,11 +27,24 @@ requirements:
   host:
     - gsl
     - cgal
-    - libopenblas
+    - libblas * *blis  # [linux]
+    - libcblas * *blis  # [linux]
+    - libblas * *blis  # [osx and x86_64]
+    - libcblas * *blis  # [osx and x86_64]
+    - libblas  # [osx and arm64]
+    - libcblas  # [osx and arm64]
     - gmp  # [unix]
     - llvm-openmp  # [osx]
     - libgomp  # [linux]
     - cfitsio
+  run:
+    - libblas * *blis  # [linux]
+    - libcblas * *blis  # [linux]
+    - libblas * *blis  # [osx and x86_64]
+    - libcblas * *blis  # [osx and x86_64]
+    - libblas  # [osx and arm64]
+    - libcblas  # [osx and arm64]
+    - blis  # [linux]
 
 test:
   commands:
